@@ -1,0 +1,44 @@
+body {
+    background-color: #ffe274;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.todoapp h1 {
+    color: black;
+}
+
+.info {
+    font-size: 16px;
+    color: #111;
+    text-shadow: none;
+}
+
+.todo-list li.completed label {
+    color: #aaa;
+}    
+
+.todo-count strong {
+    font-weight: 700;
+}
+
+.todoapp input::-webkit-input-placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.todoapp input::-moz-placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.todoapp input::input-placeholder {
+    color: #aaa;
+    font-weight: 400;
+}
+
+.todoapp {
+    margin-left: 20px;
+    margin-right: 20px;
+}
