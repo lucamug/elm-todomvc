@@ -95,31 +95,3 @@ index flags =
 htmlToReinject : a -> List b
 htmlToReinject _ =
     []
-
-
-
---
---     , javascriptThatStartsElm = """
--- var storedState = localStorage.getItem('elm-todo-save');
--- var startingState = storedState ? JSON.parse(storedState) : null;
--- var node = document.getElementById('elm');
--- var app = Elm.Main.init(
---     { node: node
---     , flags: startingState
---     }
--- );
--- // Ports
--- app.ports.setStorage.subscribe(function(state) {
---     localStorage.setItem('elm-todo-save', JSON.stringify(state));
--- }); """
---
--- prefix : String
--- prefix =
---     "elm-start-"
---
---
--- tag : { loader : String, notification : String }
--- tag =
---     { notification = prefix ++ "notification"
---     , loader = prefix ++ "loader"
---     }
