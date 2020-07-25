@@ -18,10 +18,10 @@ index flags =
         [ lang "en" ]
         [ head []
             ([]
-                ++ [ title_ [] [ text Main.conf.title ]
-                   , meta [ charset "utf-8" ] []
-                   , meta [ name "author", content Main.conf.author ] []
-                   , meta [ name "description", content Main.conf.description ] []
+                ++ [ meta [ charset "utf-8" ] []
+                   , title_ [] [ text flags.nameLong ]
+                   , meta [ name "author", content flags.author ] []
+                   , meta [ name "description", content flags.description ] []
                    , meta [ name "viewport", content "width=device-width, initial-scale=1, shrink-to-fit=no" ] []
                    , meta [ httpEquiv "x-ua-compatible", content "ie=edge" ] []
                    , link [ rel "icon", href (Starter.Icon.iconFileName 64) ] []
@@ -31,8 +31,8 @@ index flags =
                    , link [ rel "stylesheet", href "/a11y.css" ] []
                    ]
                 ++ Starter.SnippetHtml.messagesStyle
-                ++ Starter.SnippetHtml.pwa Main.conf
-                ++ Starter.SnippetHtml.previewCards Main.conf
+                ++ Starter.SnippetHtml.pwa (Starter.Flags.flagsToThemeColor flags)
+                ++ Starter.SnippetHtml.previewCards flags Main.conf
             )
         , body []
             ([]
@@ -58,16 +58,7 @@ index flags =
                 -- Signature "Made with ❤ and Elm"
                 ++ [ script [] [ textUnescaped Starter.SnippetJavascript.signature ] ]
                 -- Paasing metadata to Elm, initializing "window.ElmStarter"
-                ++ [ script []
-                        [ textUnescaped <|
-                            Starter.SnippetJavascript.metaInfo
-                                { gitBranch = flags.gitBranch
-                                , gitCommit = flags.gitCommit
-                                , env = flags.env
-                                , version = flags.version
-                                }
-                        ]
-                   ]
+                ++ [ script [] [ textUnescaped <| Starter.SnippetJavascript.metaInfo flags ] ]
                 -- Let's start Elm!
                 ++ [ Html.String.Extra.script []
                         [ Html.String.textUnescaped

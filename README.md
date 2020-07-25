@@ -1,5 +1,10 @@
-# TodoMVC in Elm
+# Elm • TodoMV
 
-This is the classic TodoMCV build with [`elm-starter`](https://github.com/lucamug/elm-starter)
+## The classic TodoMCV built with elm-starter
 
-* [README original elm-todomvc](https://github.com/evancz/elm-todomvc)
+This is the Elm version of the [TodoMCV](http://todomvc.com/) application converted to a PWA with [`elm-starter`](https://github.com/lucamug/elm-starter).
+
+* [README evancz/elm-todomvc](https://github.com/evancz/elm-todomvc)
+* [README lucamug/elm-starter](https://github.com/lucamug/elm-starter)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/lucamug/elm-todomvc)

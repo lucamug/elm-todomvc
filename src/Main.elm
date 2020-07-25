@@ -27,22 +27,12 @@ import Task
 
 conf : Starter.ConfMain.Conf
 conf =
-    { title = "Elm • TodoMV"
-    , description = "Example of the TodoMV application written in Elm and built by elm-starter"
-    , domain = "https://elm-todomvc.guupa.com"
-    , urls = [ "/" ]
+    { urls = [ "/" ]
     , assetsToCache =
         [ "/base.css"
         , "/index.css"
         , "/a11y.css"
         ]
-    , twitterSite = ""
-    , twitterHandle = ""
-    , themeColor = "#ffe274"
-    , author = "Evan Czaplicki"
-    , snapshotFileName = "snapshot.jpg"
-    , snapshotWidth = 700
-    , snapshotHeight = 350
     }
 
 
