@@ -37,12 +37,13 @@ view _ =
                             , description = "NOT-AVAILABLE [description]"
                             , author = "NOT-AVAILABLE [author]"
                             , version = "NOT-AVAILABLE [version]"
-                            , homepage = "NOT-AVAILABLE [homepage]"
+                            , homepage = "http://example.com/xxx/yyy"
                             , license = "NOT-AVAILABLE [license]"
                             , twitterSite = Just "NOT-AVAILABLE [twitterSite]"
                             , twitterAuthor = Just "NOT-AVAILABLE [twitterAuthor]"
-                            , snapshotWidth = Nothing
-                            , snapshotHeight = Nothing
+                            , snapshotWidth = Just "NOT-AVAILABLE [snapshotWidth]"
+                            , snapshotHeight = Just "NOT-AVAILABLE [snapshotHeight]"
+                            , themeColor = Nothing
 
                             -- From Git
                             , commit = "NOT-AVAILABLE [commit]"
